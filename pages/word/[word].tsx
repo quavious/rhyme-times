@@ -148,7 +148,7 @@ const WordPage = (props: any) => {
               key={i}
               className="font-bold my-3 cursor-pointer hover:text-teal-400"
             >
-              <Link key={i} href={`/word/${word}`}>{`${i + 1}. ${word}`}</Link>
+              <Link href={`/word/${word}`}>{`${i + 1}. ${word}`}</Link>
             </h4>
           ))
         ) : (
