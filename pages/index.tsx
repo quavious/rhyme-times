@@ -114,14 +114,14 @@ const Home = () => {
       </h4>
       <div className="h-96 overflow-y-scroll mx-auto w-96 mt-4 bg-white pt-1 pb-4 px-2">
         {assets.map((word, i) => (
-          <Link key={i} passHref href={`/word/${word}`}>
-            <h4
-              key={i}
-              className="font-bold my-3 cursor-pointer hover:text-teal-400 text-lg"
-            >
+          <h4
+            key={i}
+            className="font-bold my-3 cursor-pointer hover:text-teal-400 text-lg"
+          >
+            <Link key={i} href={`/word/${word}`}>
               {word}
-            </h4>
-          </Link>
+            </Link>
+          </h4>
         ))}
       </div>
     </Layout>

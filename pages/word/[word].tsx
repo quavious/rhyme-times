@@ -144,11 +144,12 @@ const WordPage = (props: any) => {
         <h4 className="font-bold mt-4 mb-1">Rhymes</h4>
         {words && words.length > 0 ? (
           words.map((word, i) => (
-            <Link key={i} passHref={true} href={`/word/${word}`}>
-              <h4 className="font-bold my-3 cursor-pointer hover:text-teal-400">{`${
-                i + 1
-              }. ${word}`}</h4>
-            </Link>
+            <h4
+              key={i}
+              className="font-bold my-3 cursor-pointer hover:text-teal-400"
+            >
+              <Link key={i} href={`/word/${word}`}>{`${i + 1}. ${word}`}</Link>
+            </h4>
           ))
         ) : (
           <h4 className="font-bold my-3">No Rhymes Found</h4>
