@@ -5,6 +5,10 @@ const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
   return (
     <>
       <Head>
+        <meta
+          name="google-site-verification"
+          content="HAYE8UfjieIAg4t5t7jHsyPS1oCTPNuEEgGUkHCozSM"
+        />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8567722160341015"
