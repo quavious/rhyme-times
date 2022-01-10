@@ -64,6 +64,7 @@ const Home = () => {
   const [keyword, setKeyword] = useState('');
   const [warning, setWarning] = useState(false);
   const router = useRouter();
+  // const AdComponent = dynamic(() => import('../components/ad/index'));
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

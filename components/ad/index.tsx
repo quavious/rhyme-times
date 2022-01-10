@@ -1,8 +1,6 @@
-import '../styles/globals.css';
-import type { AppProps } from 'next/app';
 import { useEffect } from 'react';
 
-function MyApp({ Component, pageProps }: AppProps) {
+const AdComponent = () => {
   useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
       console.log('Ad Loaded');
@@ -12,8 +10,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       '//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=fe338c3c-c4f5-4094-907e-1381aa8bcee1';
     adScript.async = true;
     document.body.appendChild(adScript);
-  });
-  return <Component {...pageProps} />;
-}
+  }, []);
+  return (
+    <>
+      <div id="amzn-assoc-ad-fe338c3c-c4f5-4094-907e-1381aa8bcee1"></div>
+    </>
+  );
+};
 
-export default MyApp;
+export default AdComponent;

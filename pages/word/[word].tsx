@@ -65,6 +65,7 @@ const WordPage = (props: any) => {
   const [keyword, setKeyword] = useState('');
   const [warning, setWarning] = useState(false);
   const router = useRouter();
+  // const AdComponent = dynamic(() => import('../../components/ad/index'));
 
   useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
