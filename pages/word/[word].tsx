@@ -73,6 +73,7 @@ const WordPage = (props: any) => {
     if (!props || !props.rhymes || !props.definitions) {
       return;
     }
+    setKeyword('');
     setWords(props.rhymes);
     setDefinitions(props.definitions);
 
@@ -127,32 +128,35 @@ const WordPage = (props: any) => {
           </h4>
         )}
       </div>
+      <h4 className="font-bold my-2 text-white">Rhymes of {title}</h4>
       <div
-        className="h-96 overflow-y-scroll mx-auto w-96 mt-6 shadow-lg pt-1 pb-4 px-2 bg-white"
+        className="h-96 overflow-y-scroll mx-auto w-full mt-2 shadow-lg bg-white"
         id="words-box"
       >
-        <h4 className="font-bold my-1">Definition</h4>
+        <h4 className="font-bold pt-2 pb-1 px-2 text-xl">Definition</h4>
         {definitions && definitions.length > 0 ? (
           definitions.map((definition, i) => (
-            <h4 key={i} className="font-bold my-1">
+            <h4 key={i} className="font-medium py-0.5 px-2 text-sm">
               - {definition.definition}
             </h4>
           ))
         ) : (
-          <h4 className="font-bold my-3">No Definitions Found</h4>
+          <h4 className="font-medium py-0.5 px-2 text-sm">
+            No Definitions Found
+          </h4>
         )}
-        <h4 className="font-bold mt-4 mb-1">Rhymes</h4>
+        <h4 className="font-bold px-2 pt-2 pb-1 text-xl">Rhymes</h4>
         {words && words.length > 0 ? (
           words.map((word, i) => (
             <h4
               key={i}
-              className="font-bold my-3 cursor-pointer hover:text-teal-400"
+              className="font-bold pt-2 pb-1 px-2 cursor-pointer hover:text-teal-400"
             >
               <Link href={`/word/${word}`}>{`${i + 1}. ${word}`}</Link>
             </h4>
           ))
         ) : (
-          <h4 className="font-bold my-3">No Rhymes Found</h4>
+          <h4 className="font-bold py-1 px-2">No Rhymes Found</h4>
         )}
       </div>
     </Layout>

@@ -109,14 +109,14 @@ const Home = () => {
           </h4>
         )}
       </div>
-      <h4 className="font-bold my-3 text-white">
+      <h4 className="font-bold my-2 text-white">
         You can look around for examples.
       </h4>
-      <div className="h-96 overflow-y-scroll mx-auto w-96 mt-4 bg-white pt-1 pb-4 px-2">
+      <div className="h-96 overflow-y-scroll mx-auto w-full mt-2 bg-white">
         {assets.map((word, i) => (
           <h4
             key={i}
-            className="font-bold my-3 cursor-pointer hover:text-teal-400 text-lg"
+            className="font-bold px-2 pt-2 pb-1 cursor-pointer hover:text-teal-400 text-lg"
           >
             <Link key={i} href={`/word/${word}`}>
               {word}
