@@ -1,19 +1,13 @@
-import { useEffect } from 'react';
+import Script from 'next/script';
 
 const AdComponent = () => {
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Ad Loaded');
-    }
-    const adScript = document.createElement('script');
-    adScript.src =
-      '//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=fe338c3c-c4f5-4094-907e-1381aa8bcee1';
-    adScript.async = true;
-    document.body.appendChild(adScript);
-  }, []);
   return (
     <>
-      <div id="amzn-assoc-ad-fe338c3c-c4f5-4094-907e-1381aa8bcee1"></div>
+      <div id="amzn-assoc-ad-fe338c3c-c4f5-4094-907e-1381aa8bcee1"></div>{' '}
+      <Script
+        src={`https://z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=fe338c3c-c4f5-4094-907e-1381aa8bcee1`}
+        async={true}
+      ></Script>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+
 const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
   return (
     <>
@@ -15,7 +16,6 @@ const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
             <Link href={'/'}>Rhyme Times!</Link>
           </h1>
           {children}
-          <div id="amzn-assoc-ad-fe338c3c-c4f5-4094-907e-1381aa8bcee1"></div>
         </div>
       </div>
     </>
